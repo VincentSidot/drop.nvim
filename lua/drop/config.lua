@@ -10,12 +10,12 @@ local M = {}
 ---@class DropConfig
 M.defaults = {
   ---@type DropTheme|string
-  theme = "leaves", -- can be one of rhe default themes, or a custom theme
-  max = 75, -- maximum number of drops on the screen
-  interval = 100, -- every 150ms we update the drops
-  screensaver = 1000 * 60 * 5, -- show after 5 minutes. Set to false, to disable
+  theme = "leaves",                                -- can be one of rhe default themes, or a custom theme
+  max = 75,                                        -- maximum number of drops on the screen
+  interval = 100,                                  -- every 150ms we update the drops
+  screensaver = 1000 * 60 * 5,                     -- show after 5 minutes. Set to false, to disable
   filetypes = { "dashboard", "alpha", "starter" }, -- will enable/disable automatically for the following filetypes
-  winblend = 100, -- winblend for the drop window
+  winblend = 100,                                  -- winblend for the drop window
 }
 
 M.ns = vim.api.nvim_create_namespace("drop")
@@ -129,6 +129,15 @@ M.themes = {
       "#ff598f",
     },
   },
+  matrix = {
+    symbols = { "0", "1" },
+    colors = {
+      "#00FF00",
+      "#00BB00",
+      "#007700",
+      "#003300",
+    },
+  }
 }
 
 M.options = {}
